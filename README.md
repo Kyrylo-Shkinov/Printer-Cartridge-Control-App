@@ -1,31 +1,53 @@
-🎯 Cartridge Tracker
+# 🎯 Cartridge Tracker
 
-A program for monitoring the status of printer cartridges. Automatically reminds you of low levels, allows you to keep records and conveniently update data.
+Програма для моніторингу стану картриджів у принтерах. Автоматичні нагадування, облік залишків, зручне оновлення даних.
 
-🔧 Functionality
+## 🚀 Функції
 
-Add/edit/delete printers
+* ➕ Додавання/редагування/видалення принтерів
+* 🖨️ Введення кількості картриджів та мінімальних порогів
+* ⚠️ Маркування картриджа як заміненого
+* 🔴 Підсвічування червоним при досягненні мінімального рівня
+* 🕓 Щоденне нагадування о 16:00 *(у розробці)*
+* 🔔 Фонове повідомлення при виявленні низького рівня
+* 🧩 Іконка в системному треї
 
-Entering the number of cartridges and minimum thresholds
+## 🛠️ Технології
 
-Mark for cartridge replacement
+| Компонент        | Призначення         |
+| ---------------- | ------------------- |
+| `tkinter`        | Графічний інтерфейс |
+| `sqlite3`        | База даних          |
+| `plyer`          | Повідомлення        |
+| `pystray`, `PIL` | Іконка в треї       |
 
-Highlighting in red if the level is below the minimum
+## 📸 Скриншоти *(за бажанням)*
 
-Reminder at 16:00 every day (not yet available or not always available)
+*(Встав сюди зображення GUI, якщо є)*
 
-Background notification when low level is detected
+## 📦 Встановлення
 
-Icon in the system tray (pystray)
+```bash
+git clone https://github.com/yourname/cartridge-tracker.git
+cd cartridge-tracker
+pip install -r requirements.txt
+python main.py
+```
 
-📦 Technologies
+## 📅 Roadmap
 
-tkinter - GUI
+* [ ] Завершити нагадування о 16:00
+* [ ] Додати автозапуск
+* [ ] Хмарна синхронізація
 
-sqlite3 - database
+## 🤝 Внесок
 
-plyer - notification
+PR та issue — вітаються. Ознайомся з `CONTRIBUTING.md`.
 
-pystray, PIL - tray icon
+## 📄 Ліцензія
 
+MIT
 
+---
+
+Хочеш — зроблю темплейт на основі цього з Markdown-розміткою.
