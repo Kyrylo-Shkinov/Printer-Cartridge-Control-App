@@ -8,7 +8,7 @@ from plyer import notification
 import sys
 import os
 from pystray import Icon as TrayIcon, Menu as TrayMenu, MenuItem as TrayItem
-from PIL import Image, ImageDraw
+from PIL import Image
 
 if getattr(sys, 'frozen', False):
     base_path = os.path.dirname(sys.executable)
