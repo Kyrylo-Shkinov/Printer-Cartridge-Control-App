@@ -310,9 +310,9 @@ class CartridgeApp:
                 types = ", ".join([f"{t}({q})" for t, q, _ in low_cartridges])
                 notification.notify(
                     title="Увага! Треба дозамовити картриджі!!!",
-                    message=f"Принтер {pname}: \nНизький рівень {types}",
+                    message=f"Принтер {pname}: \nНизький рівень:\n {types}",
                     app_name="Printer Cartridge App",
-                    timeout=10
+                        timeout=10
                 )
 
     def daily_reminder(self):
@@ -348,7 +348,7 @@ class CartridgeApp:
                     types = ", ".join([f"{t}({q})" for t, q, _ in low_cartridges])
                     notification.notify(
                         title="Увага! Треба дозамовити картриджі!!!",
-                    message=f"Принтер {pname}: \nНизький рівень {types}",
+                    message=f"Принтер {pname}: \nНизький рівень:\n {types}",
                     app_name="Printer Cartridge App",
                         timeout=10
                     )
