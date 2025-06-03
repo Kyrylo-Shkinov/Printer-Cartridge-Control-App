@@ -309,8 +309,8 @@ class CartridgeApp:
             if low_cartridges:
                 types = ", ".join([f"{t}({q})" for t, q, _ in low_cartridges])
                 notification.notify(
-                    title="Увага! Мало картриджів",
-                    message=f"Принтер {pname}: низький рівень {types}",
+                    title="Увага! Треба дозамовити картриджі!!!",
+                    message=f"Принтер {pname}: \nНизький рівень {types}",
                     app_name="Printer Cartridge App",
                     timeout=10
                 )
@@ -321,12 +321,12 @@ class CartridgeApp:
             if now.hour == 16:
                 notification.notify(
                     title="Нагадування",
-                    message="Чи оновлювали ви сьогодні картриджі в принтері?",
+                    message="Чи оновлювали ви сьогодні картриджі в принтері? Не забудьте внести зміни в трекер!",
                     app_name="Cartridge Tracker",
                     timeout=60
                 )
                 # чекати 61 секунду, щоб не повторювалося кілька разів
-                t.sleep(600)
+                t.sleep(900)
             else:
                 t.sleep(30)
 
