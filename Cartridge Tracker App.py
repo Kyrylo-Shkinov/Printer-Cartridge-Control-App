@@ -347,9 +347,9 @@ class CartridgeApp:
                 if low_cartridges:
                     types = ", ".join([f"{t}({q})" for t, q, _ in low_cartridges])
                     notification.notify(
-                        title="Увага! Мало картриджів",
-                        message=f"Принтер {pname}: низький рівень {types}",
-                        app_name="Printer Cartridge App",
+                        title="Увага! Треба дозамовити картриджі!!!",
+                    message=f"Принтер {pname}: \nНизький рівень {types}",
+                    app_name="Printer Cartridge App",
                         timeout=10
                     )
             t.sleep(6000)
