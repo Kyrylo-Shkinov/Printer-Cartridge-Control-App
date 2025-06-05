@@ -303,7 +303,7 @@ class CartridgeApp:
             self.cursor.execute("""
                 SELECT type, quantity, min_threshold 
                 FROM cartridges 
-                WHERE printer_id = ? AND quantity <= min_threshold
+                WHERE printer_id = ? AND quantity < min_threshold
             """, (pid,))
             low_cartridges = self.cursor.fetchall()
             if low_cartridges:
@@ -341,7 +341,7 @@ class CartridgeApp:
                 cursor.execute("""
                     SELECT type, quantity, min_threshold 
                     FROM cartridges 
-                    WHERE printer_id = ? AND quantity <= min_threshold
+                    WHERE printer_id = ? AND quantity < min_threshold
                 """, (pid,))
                 low_cartridges = cursor.fetchall()
                 if low_cartridges:
